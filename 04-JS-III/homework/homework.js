@@ -27,14 +27,14 @@ function incrementarPorUno(array) {
   for(var i=0;i<array.length;i++){
     arrayNew[i] = array[i]+1;
   }
-
+  return arrayNew;
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array.push(elemento);
+  array[array.length] = elemento;
   return array;
 }
 
@@ -99,6 +99,14 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var max =numeros[0];
+  for(var i=1;i<numeros.length;i++){
+    if (numeros[i]> max){
+      max = numeros[i];
+    }
+   
+  }
+  return max;
   
 }
 
@@ -107,6 +115,13 @@ function multiplicarArgumentos() {
   // Si no se pasan argumentos devuelve 0
   // Si se pasa un argumento, simplemente devuélvelo
   // Tu código:
+  var total = 1;
+  if(arguments.length < 1) return 0;  
+  for(var i = 0; i < arguments.length; i++) {
+    total *=  arguments[i];
+  }
+  return total;
+
 }
 
 // No modificar nada debajo de esta línea
